@@ -1,40 +1,90 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+<!doctype html>
+<html lang="en">
 <head>
-
-<title>Untitled Document</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>responsive-grid demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <style>
+    @media all and (max-width: 35em) {
+    .my-breakpoint .ui-block-a,
+    .my-breakpoint .ui-block-b,
+    .my-breakpoint .ui-block-c,
+    .my-breakpoint .ui-block-d,
+    .my-breakpoint .ui-block-e {
+      width: 100%;
+      float:none;
+    }
+  }
+ 
+  @media all and (min-width: 45em) {
+    .my-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
+    .my-breakpoint.ui-grid-b .ui-block-b,
+    .my-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
+  }
+  </style>
 </head>
-<body class="sub">
-<table width="90%" border="0" cellspacing="0" cellpadding="1" style="text-align: center">
-  <tr>
-    <td>
-      <table width="100%" border="0" cellspacing="0" cellpadding="4">
-        <tr class="HeaderColor">
-          <td colspan="2">
-            <h3>Title - $10.99</h3>          </td>
-        </tr>
-        <tr>
-          <td style="text-align: center; vertical-align: top">
-            <a href="#"><img src="" alt=" Thumbnail image" width="100" height="100" border="0" id="image" /><br />
-            View</a>          </td>
-          <td style="vertical-align: top">
-            <p class="StoryContentColor">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>            <p> <a href="#">More &gt;&gt;</a></p>          </td>
-        </tr>
-      </table>    </td>
-  </tr>
-</table>
-<p>&nbsp;</p>
-<table width="90%" border="0" cellspacing="0" cellpadding="4" style="text-align: center">
-  <tr>
-    <td class="FooterColor">      <a href="#">1</a> &#149; <a href="#">2</a> &#149; <a href="#">3</a> &#149; 4 &#149;<a href="#"> 5</a> </td>
-    <td style="text-align: right">      <a href="#">&lt;&lt; Previous</a> &#149; <a href="#">Next &gt;&gt;</a>    </td>
-  </tr>
-</table>
+<body>
+<div data-role="header">
+    <h1>Responsive Grid Example</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <div class="ui-grid-b my-breakpoint">
+      <div class="ui-block-a"><div class="ui-body ui-body-d">Block A</div></div>
+      <div class="ui-block-b"><div class="ui-body ui-body-d">Block B</div></div>
+      <div class="ui-block-c"><div class="ui-body ui-body-d">Block C</div></div>
+    </div>
 </body>
 
-<h2 align="center"><a href="chicken.html" class="btn btn-primary btn-large">Chicken</a></h2>
-
-
+<h2 align="center"><a href="chicken.html" class="btn btn-primary btn-large">Chicken</a></h2> 
+<div class="ui-grid-a">
+  <div class="ui-block-a"><button type="button" data-theme="a">Previous</button></div>
+  <div class="ui-block-b"><button type="button" data-theme="a">Next</button></div>
+</div>
+<div class="ui-grid-solo">
+  <div class="ui-block-a"><button type="button" data-theme="b">More</button></div>
+</div>
 </html>
