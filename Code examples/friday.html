@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Database Example</title>
+</head>
+<body>
+
+	<div id='cars'></div>
+
+	<script id='myTemplate' type='text/ractive'>
+    	{{#carlist}}
+			<p>{{type}}, {{recipe}}!</p>
+		{{/carlist}}
+	</script>
+
+	<!--<script src='Ractive.min.js'></script>-->
+
+	<script>
+
+		//open database
+		var db = openDatabase('mydb4', '1.0', 'my first database', 2 * 1024 * 1024);
+		
+		db.transaction(function (tx) {
+  			tx.executeSql('CREATE TABLE recipe (id UNIQUE, type TEXT, recipe BLOB)');
+		
+var recipe=new Object ();
+recipe.id = 1;
+recipe.type ="Chicken";
+recipe.title ="Black Bean Stir-Fry";
+recipe.ingredients = ["Skinless chicken breasts 2 large, cut into chunks", "Groundnut oil 1tbsp", "Red pepper 1 deseeded and sliced", 				"Yellow pepper 1 deseeded and sliced","Chinese black bean sauce 2 tbsp", "Light soy sauce 1 tbsp","Chicken stock 60ml", "Cornflour 2 tsp","Cooked 	long grain rice 250g (optional)"];
+recipe.instructions = ["To make the marinade combine ingredients." , " Mix all ingredients into bowl." , "Add chicken and mix until 	covered all over.", "Put into refrigerator for 15-20 minutes.", "Ready to cook." , "Heat the oil in a wok or large frying pan." ," Once hot add chicken and stir for 4-5 minutes.", " When golden, remove from wok or frying pan.","Adding the peppers to the wok or frying pan." , "Brisk heat 	for 3 minutes.", "Return chicken to wok or frying pan, add black bean sauce. Cook for another 2 minutes." , "Combine soy sauce, chicken stock, cornflour in a bowl, adding 2 tbsp of water. Pour into wok or frying pan.", "Simmer gently for 3 minutes, until sauce is thick." , "Serve with rice."];
+			
+		
+							
+							
+						
+							
+							alert(recipe.type);
+
+			
+
+
+
+				tx.executeSql('INSERT INTO recipe (id,type, recipe) VALUES (?,?,?)',  [recipe.id, recipe.type,recipe]);
+			
+				
+        	});
+			
+			db.transaction(function (tx) {
+  				tx.executeSql('SELECT * FROM recipe', [], function (tx, results) {
+  					var len = results.rows.length, i;
+  					for (i = 0; i < len; i++) {
+    					alert(results.rows.item(i).type);
+ 					 }
+					}); 
+			});
+			
+			//Database transactions are asynchronous. 
+			//That means that normally this loop would continue to loop over each car 
+			//without waiting for the database to write the record. 
+			
+			//By the time the transactions are being undertaken the loop has finished 
+			//and the looping variable, i, has hit its maximum so only the last car is written. 
+			
+			//One way to fix this problem is to place the transaction in something called an anonymous function.
+			//where 'i' is passed as a parameter to the function
+			
+      		/*(function(i) {
+        		db.transaction(function (tx) {  
+               	tx.executeSql('INSERT INTO type (type, recipe) VALUES (?,?,?)',  [i, cars[i].model, cars[i].colour]);
+        		});
+      		});
+    	};
+
+
+		//This defines the data binding using Ractive.js
+		var ractive = new Ractive({
+            el: 'recipe',
+            template: '#myTemplate',
+            data: { recipelist: recipe}
+        });
+*/
+
+	</script>
+
+</body>
+</html>
