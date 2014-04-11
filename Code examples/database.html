@@ -40,37 +40,67 @@
 				
 			var recipe2=new Object ();
 			recipe2.id = 2;
-			recipe2.type ="Chicken";
-			recipe2.title ="Curried Chicken";
-			recipe2.ingredients = ["Olive oil 1 tbsp" ,"Onion 1 peeled and chopped", "Skinless chicken fillets diced","Korma curry paste 1-3 tbsp",									"Double cream 4 tbsp" ,"Mango 1 peeled, stoned and diced"];
-			recipe2.instructions = ["Heat 1 table spoon of oil in a large frying pan","Add onion and cook for 5 minutes, until softened",
-"Add chicken, more oil if needed","Continue cooking for another 5 minutes, stir often","Stir in curry paste, including 3-4 tbsp of water",
-"Continue for another 5 mintues","Add cream, continue cooking until sauce is thick and chicken is cooked",
-"Stir in mango after taking pan off the heat"];
+			recipe2.type ="Pork";
+			recipe2.title ="Sausage Casserole";
+			recipe2.ingredients = ["Sausages 16","Passata 1 jar or 2 cartons" ,"Baked beans 2 Cans", "Sprinkling of chilli powder",
+			"Garlic 1-2 chopped","Onions 1 chopped","Sprinkling of black pepper" ,"Sugar 1 ts"];
+			recipe2.instructions = ["Peel and dice onions","Peel and thinly slice garlic","Either heat sausages in a frying pan with oil and  	onions and garlic" ,"Or bake sausages, brushing with a fair bit of oil, place the onions and garlic on top, and bake for about 20 mins on medium heat" ,"Pour passata and beans into a large casserole dish","Sprinkle chilli and pepper to taste", "Spoon sugar, then add mustard if required, and stir it all up","Remove onions, garlic and sausages from the oven","Spoon saucy mix","Put lid on dish, and bake at medium heat for an hour", "Option to serve with mashed potato"];   
 			
 					
 			tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe2.id, recipe2.type, recipe2.title,recipe2]);
 							
 	        var recipe3=new Object ();
 			recipe3.id = 3;
-			recipe3.type ="Pork";
-			recipe3.title ="Sausage Casserole";
-			recipe3.ingredients = ["Sausages 16","Passata 1 jar or 2 cartons" ,"Baked beans 2 Cans", "Sprinkling of chilli powder",
-			"Garlic 1-2 chopped","Onions 1 chopped","Sprinkling of black pepper" ,"Sugar 1 ts"];
-			recipe3.instructions = ["Peel and dice onions","Peel and thinly slice garlic","Either heat sausages in a frying pan with oil and  	onions and garlic" ,"Or bake sausages, brushing with a fair bit of oil, place the onions and garlic on top, and bake for about 20 mins on medium heat" ,"Pour passata and beans into a large casserole dish","Sprinkle chilli and pepper to taste", "Spoon sugar, then add mustard if required, and stir it all up","Remove onions, garlic and sausages from the oven","Spoon saucy mix","Put lid on dish, and bake at medium heat for an hour", "Option to serve with mashed potato"];   
+			recipe3.type ="Fish";
+			recipe3.title ="Salmon with couscous";
+			recipe3.ingredients = ["Lemon juice 1 ", "Olive oil 2tbsp", "Salt and pepper","Skinless salmon 		fillets 2 150g-175g each","Lemon, mint and parsley couscous 100g", "Rocket leaves 20g","Light mayonnaise 	2tbsp"];   
+			recipe3.instructions = ["To make the marinade, combine lemon juice and 1 tbsp of oil.","Add salmon fillets and turn twice ensuring coating is all over.","Cover and marinate for 15-20 minutes.",
+"Preheat overn to 220C.","Drizzle remaining oil into a roastin tin.","Drain salmon and put into tin.","Roast for 15-20 minutes until salmon is starting to go crisp.","Put couscous into bowl, add boiling water.","Leave to stand for 5 mintues to absorb water.","Plate couscous on plate, rocket leaves.","Add mayonnaise if required."];
+		
 			
 			tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe3.id, recipe3.type, recipe3.title,recipe3]);
 		
-			var recipe=new Object ();
-			recipe.id = 4;
-			recipe.type ="Pork";
-			recipe.title ="Pork Noodles";
-			recipe.ingredients = ["Chinese egg noodles 335g", "Soy sauce 3 tbsp", "Thai sweet chilli sauce 180ml","Garlic granules 1/2 ts",
-"Ground ginger 1/4 ts","Sesame oil 3tbsp","Soy sauce 120m","Garlic granules 1/2 ts","Pork fillet, cut into strips 1 (450g)","Vegatable oil 2tbsp","Onions 2, chopped","Pinch crushed chilli flakes","Thai sweet chilli sauce 3tbsp","Savoy cabbage 1/2","Stalks celery 4, sliced","Carrots 2, sliced","Red peppers 3 chopped","Cornflour 2 ts","Cold water 4tbsp"];
-			recipe.instructions = ["Fill a large pot salted water and bring to a rolling boil","Stir in the Chinese noodles, and return to the boil","Cook the noodles uncovered, stirring occasionally","Drain well", "Whisk together the 3 tablespoons soy sauce, 180ml sweet chilli sauce, 1/2 teaspoon garlic granules, the ground ginger and the sesame oil in a large bowl","Add noodles and toss to coat","Whisk together the 120ml soy sauce and 1/2 teaspoon garlic granules in a large bowl,add the pork and stir to coat","Allow to marinate for 5 minutes","Heat the cooking oil in a wok or a large, deep frying pan over medium-high heat","Add the pork, onions, and crushed chilli flakes to the oil","Stir in 3 tablespoons sweet chilli sauce, cabbage, celery, carrots and peppers", "Whisk together the cornflour and water and add to the stir fry, stirring until the mixture thickens","Serve the stir-fry over the noodles"];
-			
 		
-							alert(recipe.title);
+			var recipe4=new Object ();
+			recipe4.id = 4;
+			recipe4.type ="Specific";
+			recipe4.title ="Crunchy bacon salad";
+			recipe4.ingredients = ["Extra virgin olive oil 1tbsp", "Focaccia 75g", "Bacon lardons 110g","Garlic 2 cloves, peeled and chopped","Mixed salad leaves 50g","Lime 1, juice","Salt and pepper"];   			
+			recipe4.instructions = ["Heat the oil in a large frying pan.","Add bacon and cook for 5 minutes.","Add focaccia and continue cooking, for another 5 minutes until bread is crispy.",
+"Add girlic and stir for a few minutes.","Arrange mixed salad leaves on a plate.","Scatter hot bacon over top.","Drizzle with extra olive oil, salt and pepper and lime juice."];
+			
+			tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe4.id, recipe4.type, recipe4.title,recipe4]);
+		
+			var recipe5=new Object ();
+			recipe5.id = 5;
+			recipe5.type ="Specific";
+			recipe5.title ="Jacket Potatoes With Tuna";
+			recipe5.ingredients = ["Baking potatoes 2", "Olive oil 2 tsp", "Salt and pepper","Tuna chunks 185g","Light mayonnaise 3-4 tbsp","Lime 1, juice","Mixed salad leaves"];   			
+			recipe5.instructions = ["Preheat oven to 200C/400F.","Put potatoes in small roasting tin, prick several times.","Drizzle with a teaspoon of olive oil.","Sprinkle salt and pepper.","Bake until potatoes are tender, usually about 1 hour.","Mix tuna with mayonnaise.","Season with lime and salt and pepper.","Divide cooked potatoes, add tuna mix.", "Serve with mixed leaves."];
+			
+			tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe5.id, recipe5.type, recipe5.title,recipe5]);
+		
+		
+		    var recipe6=new Object ();
+			recipe6.id = 6;
+			recipe6.type ="Specific";
+		    recipe6.title ="Tomato Frittata";
+			recipe6.ingredients = ["Eggs 6 large", "Sun-dried tomatoes 8", "Parmesan-style cheese 50g","Olive oil 2 tbsp","Onion 1, peeled and sliced","Tomato salad"];   			
+			recipe6.instructions = ["Preheat grill.","Break eggs whisk briefly.","Add sun-dried tomatoes and parmesan cheese and mix together.","Heat oil  in pan.","Add onion and cook for 5 minutes.","Pour egg mix into pan and stir.","Cook over a medium heat, until base is golden.","Slide pan under grill until golden on top.","Plate up with option of salad or wedges."];
+		
+		tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe6.id, recipe6.type, recipe6.title,recipe6]);
+		
+		
+		
+		    var recipe7=new Object ();
+			recipe7.id = 7;
+			recipe7.type ="Specific";
+		    recipe7.title ="Spag Bowl";
+			recipe7.ingredients = ["Olive oil 1/2 tbsp","Onion 1 diced","Garlic clove 1 crushed","Mince 500g","Carrot 1 sliced","Red pepper 1 cubed", "Mushrooms 250g","Tin tomatoes 1", "Tomato puree 1/2 tube","Bay leaves 2-3", "Salt and pepper","Spaghetti to serve",];   			
+			recipe7.instructions = ["Heat oil in a pot and fry onions and garlic.","Brown mince removing any excess fluid.","Add vegetables and cook for a minute.","Add salt and pepper  and stir thoroughly.","Add tinned tomatoes,puree and bay leaves and stir thoroughly.","Bring to the boil.","Leave to simmner fo 50 minutes - hour.","Serve with spaghetti and garlic bread."];
+		tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe7.id, recipe7.type, recipe7.title,recipe7]);
+		
+						<!--alert(recipe.instructions);-->
 							
 							
 
@@ -81,7 +111,7 @@
   				tx.executeSql('SELECT * FROM recipe', [], function (tx, results) {
   				var len = results.rows.length, i;
   					for (i = 0; i < len; i++) {
-    				alert(results.rows.item(i).title);
+    				alert(results.rows.item(i).type);
  					}
 					}); 
 			});
