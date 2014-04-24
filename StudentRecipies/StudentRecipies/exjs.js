@@ -82,7 +82,7 @@ function insertRecord() // Get value from Input and insert record . Function Cal
 	var recipe1=new Object ();
 		
         recipe1.type = "Chicken";
-       recipe1.title = "Black Bean Stir-Fry";
+       recipe1.title = "Chicken Curry";
 		recipe1.rec = "Skinless chicken breasts 2 large cut into chunks, Groundnut oil 1tbsp  Red pepper 1 deseeded and sliced Yellow pepper 1 deseeded and sliced,Chinese black bean sauce 2 tbsp Light soy sauce 1 tbsp Chicken stock 60ml, Cornflour 2 tsp Cooked 	long grain rice 250g (optional)";
 	recipe1.instruction = ["To make the marinade combine ingredients ,  Mix all ingredients into bowl  , Add chicken and mix until 	covered all over, Put into refrigerator for 15-20 minutes, Ready to cook ,Heat the oil in a wok or large frying pan , Once hot add chicken and stir for 4-5 minutes,  When golden, remove from wok or frying pan,Adding the peppers to the wok or frying pan , Brisk heat 	for 3 minutes, Return chicken to wok or frying pan, add black bean sauce, Cook for another 2 minutes , Combine soy sauce, chicken stock, cornflour in a bowl, adding 2 tbsp of water. Pour into wok or frying pan, Simmer gently for 3 minutes, until sauce is thick , Serve with rice"];
         db.transaction(function (tx) { tx.executeSql(insertStatement, [recipe1.type,recipe1.title,recipe1.rec,recipe1.instruction]); });
@@ -111,7 +111,7 @@ function insertRecord() // Get value from Input and insert record . Function Cal
 			 recipe3.instruction = ["To make the marinade, combine lemon juice and 1 tbsp of oil.","Add salmon fillets and turn twice ensuring coating is all over.","Cover and marinate for 15-20 minutes.",
 "Preheat overn to 220C.","Drizzle remaining oil into a roastin tin.","Drain salmon and put into tin.","Roast for 15-20 minutes until salmon is starting to go crisp.","Put couscous into bowl, add boiling water.","Leave to stand for 5 mintues to absorb water.","Plate couscous on plate, rocket leaves.","Add mayonnaise if required."];
 	 db.transaction(function (tx) { tx.executeSql(insertStatement, [recipe3.type,recipe3.title,recipe3.rec,recipe3.instruction]); })	
-	    //tx.executeSql(SQL Query Statement,[ Parameters ] , Sucess Result Handler Function, Error Result Handler Function );
+		//tx.executeSql(SQL Query Statement,[ Parameters ] , Sucess Result Handler Function, Error Result Handler Function );
 
 }
 
@@ -164,6 +164,7 @@ function showRecords() // Function For Retrive data from Database Display record
     $("#results13").html('');
 	  $("#results14").html('');
 	    $("#results15").html('');
+		
     db.transaction(function (tx) {
 
         tx.executeSql(selectAllStatement, [], function (tx, result) {
