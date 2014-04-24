@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Database Example</title>
+<title>Database </title>
 
 </head>
 <body>
 
-	<div id='cars'></div>
+	<div id='recipe'></div>
 
 	<script id='myTemplate' type='text/ractive'>
     	{{#recipelist}}
@@ -100,6 +100,19 @@
 			recipe7.instructions = ["Heat oil in a pot and fry onions and garlic.","Brown mince removing any excess fluid.","Add vegetables and cook for a minute.","Add salt and pepper  and stir thoroughly.","Add tinned tomatoes,puree and bay leaves and stir thoroughly.","Bring to the boil.","Leave to simmner fo 50 minutes - hour.","Serve with spaghetti and garlic bread."];
 		tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe7.id, recipe7.type, recipe7.title,recipe7]);
 		
+			    var recipe8=new Object ();
+			recipe8.id = 8;
+			recipe8.type ="Beef";
+		    recipe8.title ="Beef Stir Fry";
+			recipe8.ingredients = ["Asian rice noodles 5 cups", "Stir fry beef 3 cups","Zucchini 1 chopped", "Carrots 2 large, chopped", 
+"Bean sprouts 1 pack", "Onion 1 chopped", "Soy sauce 5 tbsp","Hoi sin sauce (optional)"];
+			recipe8.instructions = ["Cut the beef up into small strips","Use first cooking pan","Stove on medium heat", "Stir up beef until brown and then set aside","Fill up other pot up with water and set on high","Cook the noodles in boiling water", "Dice the onion, quarter the zucchini, and slice the carrots","Add the onion to the second cooking pan and stir for about five minutes","Add the zucchini, wait five minutes, then add the carrots","Add the bean sprouts", "When everything is cooked add the beef and the veggies to the pot with the noodles",
+"Add the soy sauce and stir"];
+			
+		tx.executeSql('INSERT INTO recipe (id,type, title, recipe) VALUES (?,?,?,?)',  [recipe8.id, recipe8.type, recipe8.title,recipe8]);
+		
+		
+
 						<!--alert(recipe.instructions);-->
 							
 							
