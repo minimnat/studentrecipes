@@ -1,0 +1,227 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Student recipes</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+	
+<body> 
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Nu's Student Recipes</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		
+	<center><h2> Recipe Options </h2></center>
+<form method="get" action="http://www.google.com/search">
+     
+         <input type="search"   name="q"  value="Google site search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+		 
+			</form>	<div align="center"><img src="Images/chf.jpeg" width="235" height="280">
+	  </div>
+	<p><a href="#pork" data-role="button"> Pork</a></p>	
+    <p><a href="#chicken" data-role="button">Chicken</a></p>	
+    <p><a href="#beef" data-role="button">Beef</a></p>	
+    <p><a href="#fish" data-role="button">Fish</a></p>	
+    <p><a href="#specific" data-role="button">Specific</a></p>	                 
+	</div><!-- /content -->
+	<div data-role="footer" data-theme="d">
+    <h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+    </div><!-- /page one -->
+
+
+
+<!-- Start of second page: #pork -->
+<div data-role="page" id="pork" data-theme="a">
+
+	<div data-role="header">
+	<h1>Pork</h1>
+   
+           
+	</div><!-- /header -->
+   
+	<div data-role="content" data-theme="a">	
+	<p align="left"><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Home</a></p>		
+	</div><!-- /content -->
+  
+     <form method="get" action="http://www.google.com/search">
+     
+         <input type="search"   name="q"  value="Google site search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+		 
+			</form>
+             <center> Dish Name :<div id="results"></div>
+              Dish Title : <div id="results1"></div><br>
+            <img src="Images/Spag-bol.jpg"width="300" height="300"><br><br>
+            
+       Ingredient
+      <div id="results2"></div><br>
+      
+      Instructions
+       <div id="results3"></div></center><br><br>
+	<div data-role="footer">
+	<h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+    </div><!-- /page pork -->
+
+
+<!-- Start of second page: #chicken -->
+<div data-role="page" id="chicken" data-theme="a">
+
+	<div data-role="header">
+	<h1>Chicken</h1>
+	</div><!-- /header -->
+    <div data-role="content" data-theme="a">	
+	<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Home</a></p>	
+	</div><!-- /content -->
+     <form method="get" action="http://www.google.com/search">
+     
+         <input type="search"   name="q"  value="Google site search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+
+			</form>
+            <center> Dish Name :<div id="results4"></div>
+              Dish Title : <div id="results5"></div><br>
+	<img src="Images/chicken curry.jpg" width="300" height="300"><br>
+     Ingredrient
+      <div id="results6"></div>
+      
+      Instructions
+       <div id="results7"></div></center><br><br>
+       
+	<div data-role="footer">
+	<h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+    </div><!-- /page chicken -->
+
+
+<!-- Start of second page: #beef -->
+<div data-role="page" id="beef" data-theme="a">
+
+	<div data-role="header">
+	<h1>Beef</h1>
+	</div><!-- /header -->
+	<div data-role="content" data-theme="a">	
+	<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Home</a></p>		
+	</div><!-- /content -->
+    <form method="get" action="http://www.google.com/search">
+     
+         <input type="search"   name="q"  value="Google site search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+		 
+			</form>
+              
+       
+              <center> Dish Name :<div id="results8"></div>
+              Dish Title : <div id="results9"></div><br>
+    <img src="Images/beef stir fry.jpg" width="300" height="300"><br>
+     Ingredrient
+      <div id="results10"></div>
+      
+      Instructions
+       <div id="results11"></div></center><br><br>
+       
+           
+	<div data-role="footer">
+	<h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+    </div><!-- /page beef -->
+
+
+<!-- Start of second page: #fish -->
+<div data-role="page" id="fish" data-theme="a">
+
+	<div data-role="header">
+	<h1>Fish</h1>
+	</div><!-- /header -->
+	<div data-role="content" data-theme="a">	
+	<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Home</a></p>		
+	</div><!-- /content -->
+    <form method="get" action="http://www.google.com/search">
+     
+         <input type="search"   name="q"  value="Google site search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='white';" onblur="sea() "/>
+		 
+			</form>
+           
+           <center> Dish Name :<div id="results12"></div>
+              Dish Title : <div id="results13"></div><br>
+    <img src="Images/salmon.jpg" width="300" height="300"><br>
+     Ingredrient
+      <div id="results14"></div>
+      
+      Instructions
+       <div id="results15"></div></center><br><br>
+       
+	<div data-role="footer">
+    <h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+    </div><!-- /page fish -->
+
+
+<!-- Start of second page: #specific -->
+<div data-role="page" id="specific" data-theme="a">
+
+	
+	<div data-role="header">
+		<h1>Nu's Student Recipes</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		
+	<center><h2> Specific</h2></center>
+    <div data-role="content" data-theme="a">	
+	<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Home</a></p>		
+	</div><!-- /content -->
+  <form method="get" action="http://www.google.com/search">
+     
+         <input type="search"   name="q"  value="Google site search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+		 
+			</form>
+	<div align="center"><img src="Images/Spag-bol.jpg" width="235" height="280">
+	  </div>
+      Choose 
+	<Select>
+     <option>with Potato</option>
+    <option>Chicken and Potato Pot</option>
+    <option>Shepards pie</option>
+    <option>Jacket Potato</option>
+    
+    </Select>
+    Choose
+    <Select>
+     <option>with Pasta</option>
+    <option>Stir Fry(noodles)</option>
+    <option>Pasta bake</option>
+   
+   	</Select>
+   Choose
+    <Select>
+     <option> Helthy Option</option>
+   
+   
+   	</Select>
+                  
+	</div><!-- /content -->
+	<div data-role="footer" data-theme="d">
+    <h4>Nu's Student Recipes</h4>
+	</div><!-- /footer -->
+    </div><!-- /page specific -->
+</body>
+ <script type="text/javascript" src="exjs.js"> </script>
+
+</html>
+
