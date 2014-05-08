@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>Student recipes</title> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+   
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 <body> 
@@ -14,26 +15,28 @@
 <div data-role="page" id="one">
 
 	<div data-role="header">
-		<h1>Student Recipes</h1>
+		<h1>Student Recipes </h1>
 	</div><!-- /header -->
 
-	<div data-role="content" >	
+	<div class="ui-btn-hover-b" data-role="content" >	
 		
 	<center><h2> Recipe Options </h2></center>
 <form method="get" action="http://www.google.com/search">
      
          <input type="search"   name="q"  value="Google site search"
 onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onBlur="if(this.value=='')this.value=this.defaultValue; "/>
-		 
 			</form>	
-            <div align="center"><img src="Images/chf.jpeg" width="235" height="280">
-	  </div>
+            
+
+            <div align="center"><img src="Images/chf.jpeg" width="235" height="280">	  </div>
+      
 	<p><a href="#pork" data-role="button"> Pork</a></p>	
     <p><a href="#chicken" data-role="button">Chicken</a></p>	
     <p><a href="#beef" data-role="button">Beef</a></p>	
     <p><a href="#fish" data-role="button">Fish</a></p>	
     <p><a href="#specific" data-role="button">Specific</a></p>	                 
-	</div><!-- /content -->
+	</div>
+<!-- /content -->
 	<div data-role="footer" data-theme="d">
     <h4>Nu's Student Recipes</h4>
 	</div><!-- /footer -->
@@ -42,7 +45,7 @@ onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black
 
 
 <!-- Start of second page: #pork -->
-<div data-role="page" id="pork" data-theme="a">
+<div data-role="page" id="pork" data-theme="a" >
 
 	<div data-role="header">
 	<h1>Pork</h1>
@@ -246,6 +249,8 @@ onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black
     <h4>Nu's Student Recipes</h4>
 	</div><!-- /footer -->
     </div><!-- /page specific -->
+   
+    
 </body>
  <script type="text/javascript" src="exjs.js"> </script>
 
