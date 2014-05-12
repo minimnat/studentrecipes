@@ -111,6 +111,13 @@ function insertRecord() // Get value from Input and insert record . Function Cal
 			 recipe3.instruction = ["Step1: To make the marinade, combine lemon juice and 1 tbsp of oil Step2: Add salmon fillets and turn twice ensuring coating is all over Step3: Cover and marinate for 15-20 minutes Step4: Preheat overn to 220C Drizzle remaining oil into a roastin tin Step5: Drain salmon and put into tin Step6: Roast for 15-20 minutes until salmon is starting to go crisp Step7: Put couscous into bowl, add boiling water Step8: Leave to stand for 5 mintues to absorb water Step9: Plate couscous on plate, rocket leaves Step10: Add mayonnaise if required."];
 	 db.transaction(function (tx) { tx.executeSql(insertStatement, [recipe3.type,recipe3.title,recipe3.rec,recipe3.instruction]); })	
 		//tx.executeSql(SQL Query Statement,[ Parameters ] , Sucess Result Handler Function, Error Result Handler Function );
+		
+		
+		
+		
+		
+		
+		
 
 }
 
@@ -164,6 +171,10 @@ function showRecords() // Function For Retrive data from Database Display record
 	  $("#results14").html('');
 	    $("#results15").html('');
 		
+	
+	   
+	   
+		
     db.transaction(function (tx) {
 
         tx.executeSql(selectAllStatement, [], function (tx, result) {
@@ -207,6 +218,8 @@ function showRecords() // Function For Retrive data from Database Display record
 				$("#results14").append(recipe);
 				$("#results15").append(instruction);
 				}
+			
+				
             }
 
         });
